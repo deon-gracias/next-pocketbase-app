@@ -20,7 +20,6 @@ export default function Login() {
     initialValues: {
       email: "",
       password: "",
-      terms: false,
     },
     validationSchema: toFormikValidationSchema(
       z.object({
@@ -28,11 +27,6 @@ export default function Login() {
         password: z
           .string()
           .min(8, "Password must contain atleast 8 characters"),
-        terms: z.literal<boolean>(true, {
-          errorMap: () => ({
-            message: "You must accept the terms & conditions",
-          }),
-        }),
       })
     ),
     onSubmit: (values: FormikValues) => {
@@ -54,7 +48,6 @@ export default function Login() {
         <Form>
           <Input label="Email" type="email" name="email" />
           <Input label="Password" type="password" name="password" />
-          <Checkbox name="terms" label="Accept Terms & Conditions" />
 
           <div className="form-control">
             <button type="submit" className="btn btn-primary">
