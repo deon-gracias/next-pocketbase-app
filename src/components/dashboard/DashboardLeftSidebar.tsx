@@ -9,8 +9,12 @@ import themes from "@/data/themes.json";
 import { useTheme } from "next-themes";
 import { dashboardRoutes } from "@/data/routes";
 import { Route } from "next/dist/server/router";
+import { logout } from "@/lib/auth";
+import { useRouter } from "next/router";
 
 export default function DashboardLeftSidebar() {
+  const router = useRouter();
+
   const { theme, setTheme } = useTheme();
 
   return (
@@ -56,7 +60,13 @@ export default function DashboardLeftSidebar() {
         {/* Logout */}
         <ul className="menu px-4">
           <li>
-            <button className="btn btn-outline btn-error justify-start normal-case">
+            <button
+              className="btn btn-outline btn-error justify-start normal-case"
+              onClick={() => {
+                logout();
+                router.push("/");
+              }}
+            >
               <ArrowRightOnRectangleIcon className="w-5" /> Logout
             </button>
           </li>
