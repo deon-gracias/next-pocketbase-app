@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pb:serve:win": "./pocketbase/pocketbase-win.exe serve",
-    "pb:serve:linux": "./pocketbase/pocketbase-linux serve"
+    "pb:win": "./pocketbase/pocketbase-win.exe",
+    "pb:linux": "./pocketbase/pocketbase-linux"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
