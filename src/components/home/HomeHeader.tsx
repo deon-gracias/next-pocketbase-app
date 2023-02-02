@@ -14,7 +14,7 @@ export default function HomeHeader() {
       <div className="navbar-center"></div>
 
       {/* End */}
-      <div className="navbar-end">
+      <div className="navbar-end flex gap-2">
         {/* Menu Items */}
         <ul className="menu menu-horizontal md:flex hidden">
           {homeRoutes.map((route) => (
@@ -23,7 +23,7 @@ export default function HomeHeader() {
             </li>
           ))}
         </ul>
-        <Link href={"/login"} className="btn btn-secondary">Login</Link>
+        <Link href={"/login"} className="btn btn-primary normal-case">Login</Link>
         {/* Drawer icon */}
         <label
           htmlFor="home-right-sidebar-drawer"
