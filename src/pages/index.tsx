@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     pb.authStore.isValid ? router.push("/dashboard") : null;
-  }, []);
+  }, [router]);
 
   return (
     <HomeLayout>

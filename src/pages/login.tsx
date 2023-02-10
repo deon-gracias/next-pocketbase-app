@@ -14,7 +14,7 @@ export default function Login() {
 
   useEffect(() => {
     pb.authStore.isValid ? router.push("/dashboard") : null;
-  }, []);
+  }, [router]);
 
   const formikProps = {
     initialValues: {
@@ -38,6 +38,7 @@ export default function Login() {
         })
         .catch((e) => {
           console.error("Authenticated Failed", e);
+          alert(e.message)
         });
     },
   };

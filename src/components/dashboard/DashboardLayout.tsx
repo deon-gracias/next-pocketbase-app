@@ -9,7 +9,7 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
 
   useEffect(() => {
     !pb.authStore.isValid ? router.push("/") : null;
-  }, []);
+  }, [router]);
 
   return (
     <div className="drawer drawer-mobile">
