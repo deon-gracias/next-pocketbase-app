@@ -8,7 +8,6 @@ import {
 import themes from "@/data/themes.json";
 import { useTheme } from "next-themes";
 import { dashboardRoutes } from "@/data/routes";
-import { Route } from "next/dist/server/router";
 import { logout } from "@/lib/auth";
 import { useRouter } from "next/router";
 
