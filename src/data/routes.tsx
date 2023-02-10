@@ -24,6 +24,11 @@ export const dashboardRoutes = [
     icon: <Squares2X2Icon className={iconClasses} />,
   },
   {
+    path: "/posts",
+    name: "Posts",
+    icon: <Cog6ToothIcon className={iconClasses} />,
+  },
+  {
     path: "/profile",
     name: "Profile",
     icon: <Cog6ToothIcon className={iconClasses} />,
